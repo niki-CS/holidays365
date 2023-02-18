@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://lanzadera.es/wp-content/uploads/2021/01/365-obrador_420x420.png"
+    />
+    <title>Holiday 365</title>
+    <link rel="stylesheet" type="text/css" href="/static/style2.css"/>  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>⁀➷ Holidays & Dates</h1>
+    <div class="container">
+      {% for obj in data %}
+        <div class="card">
+
+          <p class="date"> {{ obj['date'] }} </p>
+
+          <div class="data">
+
+            <p> {{ obj['localName'] }} </p>
+            <p> {{ obj['name'] }} </p>
+    
+         </div>
+        </div>
+      {% endfor %} 
+    </div>
+    <button type="button" onclick="history.back()">Try again!</button>
+  </body>
+</html>
